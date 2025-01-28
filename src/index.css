@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@layer base {
+  html {
+    @apply text-gray-900;
+    @apply bg-gray-100;
+  }
+}
+
+.active {
+  @apply bg-gray-300 font-semibold;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield; /* For Firefox */
+}
