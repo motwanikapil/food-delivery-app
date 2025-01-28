@@ -15,9 +15,6 @@ import store from './redux/store'
 
 const queryClient = new QueryClient()
 
-axios.defaults.headers.common['Authorization'] =
-  localStorage.getItem('token') || null
-
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL
 
 export default function App() {

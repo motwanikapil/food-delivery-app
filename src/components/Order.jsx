@@ -36,10 +36,18 @@ export default function Order() {
 
     try {
       setLoading(true)
-      let res = await axios.post('/order', {
-        userId: user.userId,
-        items,
-      })
+      let res = await axios.post(
+        '/order',
+        {
+          userId: user.userId,
+          items,
+        },
+        {
+          headers: {
+            Authorization: localStorage.getItem('token') || null,
+          },
+        }
+      )
       setLoading(false)
 
       toast.success('Order placed successfully!', {
